@@ -1,0 +1,4 @@
+predictor,dev_correct,test_correct,test_errors,AURC_diff,ci95_lo,ci95_hi,holm_p
+LogisticRegression,180/258,183/257,74,-0.0015,-0.0047,0.0009,0.7798
+XGBoost,188/258,192/257,65,-0.0007,-0.0089,0.0089,0.9222
+LinearSVM_calibrated,,208/257,49,-0.0046,-0.0166,0.002,0.9222

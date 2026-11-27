@@ -1,0 +1,4 @@
+depth,mean_abs_H_diff_vs_10,share_majority_label_unchanged
+3,0.1234,0.8716
+5,0.0784,0.93
+7,0.0454,0.9494

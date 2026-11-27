@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\caption{Retrieval-configuration sensitivity on the development partition (258 queries). One setting was changed at a time; the base configuration uses $\texttt{rrf\_top\_n}=10$, $\texttt{topk\_retrieve}=20$ and five shortlisted classes. AUROC is for error ranking by the fixed composite score; differences are against the base, with 95\% group-bootstrap intervals (1000 replicates). Overlap is the mean Jaccard overlap of retrieved document sets. No setting was selected or tuned.}
+\label{tab:sensitivity}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Configuration & Accuracy (\%) & $\Delta$AUROC [95\% CI] & Unchanged (\%) & Overlap \\
+\midrule
+Base & 67.4 & (0.851) & 100 & 1.00 \\
+Top-5 evidence ($\texttt{rrf\_top\_n}=5$) & 66.7 & $-0.064$ [$-0.120$, $-0.005$] & 90.7 & 0.50 \\
+Top-15 evidence & 66.7 & $+0.020$ [$-0.013$, $0.059$] & 95.4 & 0.67 \\
+Retrieve 10 per list & 68.2 & $-0.006$ [$-0.049$, $0.040$] & 89.5 & 0.72 \\
+Retrieve 40 per list & 63.2 & $-0.035$ [$-0.088$, $0.015$] & 86.8 & 0.61 \\
+Shortlist 3 classes & 57.0 & $-0.115$ [$-0.186$, $-0.048$] & 76.0 & 0.71 \\
+Shortlist 7 classes & 68.2 & $+0.035$ [$-0.003$, $0.078$] & 89.5 & 0.85 \\
+No shortlist filter & 69.4 & $+0.026$ [$-0.014$, $0.071$] & 84.1 & 0.81 \\
+Query word dropout 10\% & 65.1 & $+0.032$ [$-0.011$, $0.081$] & 83.0 & 0.65 \\
+Query word dropout 20\% & 68.2 & $+0.035$ [$-0.023$, $0.095$] & 76.7 & 0.51 \\
+Query truncated to 80\% & 68.2 & $+0.002$ [$-0.053$, $0.053$] & 80.6 & 0.53 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% Check: "Retrieve 10/40 per list" = topk_retrieve; confirm meaning in cascade_core.py. Needs \usepackage{booktabs}.

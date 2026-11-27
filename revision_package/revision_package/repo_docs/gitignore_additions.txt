@@ -1,0 +1,8 @@
+*.npz
+*.pt
+*.safetensors
+.env
+*token*
+/data/raw/
+__pycache__/
+.ipynb_checkpoints/
